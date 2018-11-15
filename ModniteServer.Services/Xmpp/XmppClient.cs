@@ -24,8 +24,6 @@ namespace ModniteServer.Xmpp
             {
                 case "iq":
                     {
-                        // TODO: Handle other <iq> messages
-
                         string id = element.Attribute("id").Value;
                         string type = element.Attribute("type").Value;
 
@@ -38,7 +36,6 @@ namespace ModniteServer.Xmpp
                             string password = query.Element(authNs + "password").Value;
                             string resource = query.Element(authNs + "resource").Value;
 
-                            // TODO: Validate login request
                             Log.Information("[XMPP] Login requested for '" + username + "'");
 
                             var loginSuccessfulResponse = new XElement("iq");
@@ -46,6 +43,32 @@ namespace ModniteServer.Xmpp
 
                             Server.SendXmppMessage(Socket, loginSuccessfulResponse);
                             messageHandled = true;
+                        }
+                        else
+                        {
+                            // Handle ping.
+                            XNamespace pingNs = "urn:xmpp:ping";
+                            var pingElement = element.Element(pingNs + "ping");
+                            if (pingElement != null)
+                            {
+                                string from = element.Attribute("from").Value;
+                                string to = element.Attribute("to").Value;
+
+                                var pongResponse = new XElement(
+                                    "iq",
+                                    new XAttribute("id", id),
+                                    new XAttribute("from", from),
+                                    new XAttribute("to", to),
+                                    new XAttribute("type", "result")
+                                );
+
+                                Log.Information("[XMPP] Ping");
+
+                                Server.SendXmppMessage(Socket, pongResponse);
+                                messageHandled = true;
+                            }
+
+                            // TODO: Handle other <iq/> messages here.
                         }
                     }
                     break;

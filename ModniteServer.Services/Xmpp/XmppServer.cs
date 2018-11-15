@@ -50,7 +50,7 @@ namespace ModniteServer.Xmpp
         
         internal void SendXmppMessage(Socket socket, XElement message)
         {
-            Log.Information("[Xmpp] Sent XMPP message {Message}", message);
+            Log.Information("[XMPP] Sent XMPP message {Message}", message);
             _server.SendMessage(socket, MessageType.Text, Encoding.UTF8.GetBytes(message.ToString()));
         }
         
