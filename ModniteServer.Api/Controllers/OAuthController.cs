@@ -31,7 +31,8 @@ namespace ModniteServer.API.Controllers
             switch (grantType)
             {
                 case "client_credentials":
-                    GenerateTokenFromClientId();
+                case "refresh_token":
+                    GenerateTokenFromBasicAuth();
                     return;
 
                 case "password":
@@ -153,9 +154,9 @@ namespace ModniteServer.API.Controllers
         }
 
         /// <summary>
-        /// Generates an OAuth token for the client (not user).
+        /// Generates an OAuth token for the client (not user) using basic auth.
         /// </summary>
-        private void GenerateTokenFromClientId()
+        private void GenerateTokenFromBasicAuth()
         {
             bool hasValidAuth = false;
 
@@ -197,6 +198,16 @@ namespace ModniteServer.API.Controllers
             {
                 Response.StatusCode = 403;
             }
+        }
+
+        /// <summary>
+        /// Refreshes an OAuth token.
+        /// </summary>
+        private void RefreshToken()
+        {
+            string authorization = Request.Headers["Authorization"];
+
+            
         }
     }
 }

@@ -24,6 +24,8 @@ namespace ModniteServer.Xmpp
             {
                 case "iq":
                     {
+                        // TODO: Handle other <iq> messages
+
                         string id = element.Attribute("id").Value;
                         string type = element.Attribute("type").Value;
 
@@ -57,7 +59,13 @@ namespace ModniteServer.Xmpp
                     break;
 
                 case "presence":
-                    // todo
+                    {
+                        // TODO
+                        // <presence>
+                        //   <status>json data</status>
+                        //   <delay stamp="datetime" xmlns="urn:xmpp:delay" />
+                        // </presence>
+                    }
                     break;
             }
 
