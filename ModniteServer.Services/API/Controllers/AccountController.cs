@@ -8,7 +8,7 @@ namespace ModniteServer.API.Controllers
     /// <summary>
     /// Handles requests for retrieving info on accounts.
     /// </summary>
-    public sealed class AccountController : Controller
+    internal sealed class AccountController : Controller
     {
         /// <summary>
         /// Retrieves basic info for an account.

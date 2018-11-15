@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ModniteServer.API.Controllers
 {
-    public class CalendarController : Controller
+    internal sealed class CalendarController : Controller
     {
         [Route("GET", "/fortnite/api/calendar/v1/timeline")]
         public void GetTimeline()

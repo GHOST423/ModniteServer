@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class PrivacyController : Controller
+    internal sealed class PrivacyController : Controller
     {
         [Route("GET", "/fortnite/api/game/v2/privacy/account/*")]
         public void GetPrivacySetting()

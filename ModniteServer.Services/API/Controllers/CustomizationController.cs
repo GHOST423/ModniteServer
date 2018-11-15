@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class CustomizationController : Controller
+    internal sealed class CustomizationController : Controller
     {
         /// <summary>
         /// Updates the player's equipped item choice.

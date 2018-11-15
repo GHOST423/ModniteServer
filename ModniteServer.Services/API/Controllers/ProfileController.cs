@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class ProfileController : Controller
+    internal sealed class ProfileController : Controller
     {
         private string _accountId;
         private Account _account;
@@ -222,7 +222,7 @@ namespace ModniteServer.API.Controllers
                                         book_purchased = false,
                                         lifetime_wins = 0,
                                         favorite_hat = "",
-                                        level = 1000000,
+                                        level = 100,
                                         favorite_battlebus = "",
                                         favorite_mapmarker = "",
                                         favorite_vehicledeco = "",

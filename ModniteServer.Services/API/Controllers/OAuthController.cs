@@ -14,7 +14,7 @@ namespace ModniteServer.API.Controllers
     /// server where you know everybody. You should rewrite this class if you want a solidly secure
     /// authentication system.
     /// </summary>
-    public sealed class OAuthController : Controller
+    internal sealed class OAuthController : Controller
     {
         public const string FortniteClientId = "ec684b8c687f479fadea3cb2ad83f5c6:e1f31c211f28413186262d37a13fc84d";
 

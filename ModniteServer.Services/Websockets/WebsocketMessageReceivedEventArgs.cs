@@ -3,7 +3,7 @@ using System.Net.Sockets;
 
 namespace ModniteServer.Websockets
 {
-    internal sealed class WebsocketMessageReceivedEventArgs : EventArgs
+    public sealed class WebsocketMessageReceivedEventArgs : EventArgs
     {
         public WebsocketMessageReceivedEventArgs(Socket socket, WebsocketMessage message)
         {

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ModniteServer.Websockets
 {
-    internal enum MessageType
+    public enum MessageType
     {
         ContinuationFrame,
         Text,
@@ -15,7 +15,7 @@ namespace ModniteServer.Websockets
         Pong
     }
 
-    internal sealed class WebsocketMessage
+    public sealed class WebsocketMessage
     {
         internal WebsocketMessage(byte[] buffer)
         {

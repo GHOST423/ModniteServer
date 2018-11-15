@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class ContentController : Controller
+    internal sealed class ContentController : Controller
     {
         [Route("GET", "/content/api/pages/fortnite-game")]
         public void GetNews()

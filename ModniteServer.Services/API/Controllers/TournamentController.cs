@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class TournamentController : Controller
+    internal sealed class TournamentController : Controller
     {
         [Route("GET", "/fortnite/api/game/v2/events/tournamentandhistory/*/*/*")]
         public void GetTournaments()

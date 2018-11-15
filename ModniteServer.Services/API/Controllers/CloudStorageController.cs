@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class CloudStorageController : Controller
+    internal sealed class CloudStorageController : Controller
     {
         /// <summary>
         /// Gets the list of system files to download from the cloud storage service.

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ModniteServer.Websockets
 {
-    internal sealed class WebsocketServer : IDisposable
+    public sealed class WebsocketServer : IDisposable
     {
         private bool _isDisposed;
         private bool _serverStarted;

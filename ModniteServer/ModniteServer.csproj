@@ -53,10 +53,6 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="ModniteServer.API.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\ModniteServer.API.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -149,10 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModniteServer.Api\ModniteServer.API.csproj">
-      <Project>{8aa47228-ba31-484f-abb6-c91b5e3ee5be}</Project>
-      <Name>ModniteServer.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ModniteServer.Services\ModniteServer.Services.csproj">
       <Project>{6959e822-fe2f-4d13-b3ef-2aa7c8d58ea9}</Project>
       <Name>ModniteServer.Services</Name>

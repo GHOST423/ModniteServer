@@ -9,7 +9,7 @@ namespace ModniteServer.API.Controllers
     /// <summary>
     /// Handles requests for access including version, platform, and account checks.
     /// </summary>
-    public sealed class AccessController : Controller
+    internal sealed class AccessController : Controller
     {
         /// <summary>
         /// Checks whether the given version and platform needs an update.

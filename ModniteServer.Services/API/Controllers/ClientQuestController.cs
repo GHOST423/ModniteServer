@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ModniteServer.API.Controllers.Profile
 {
-    public sealed class ClientQuestController : Controller
+    internal sealed class ClientQuestController : Controller
     {
         [Route("POST", "/fortnite/api/game/v2/profile/*/client/ClientQuestLogin")]
         public void ClientQuestLogin()
@@ -101,7 +101,7 @@ namespace ModniteServer.API.Controllers.Profile
                                     book_purchased = false,
                                     lifetime_wins = 0,
                                     favorite_hat = "",
-                                    level = 1000000,
+                                    level = 100,
                                     favorite_battlebus = "",
                                     favorite_mapmarker = "",
                                     favorite_vehicledeco = "",

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class MatchmakingController : Controller
+    internal sealed class MatchmakingController : Controller
     {
         /// <summary>
         /// Finds the available sessions for the player to rejoin.

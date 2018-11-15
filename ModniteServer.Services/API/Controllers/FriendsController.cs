@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class FriendsController : Controller
+    internal sealed class FriendsController : Controller
     {
         [Route("GET", "/friends/api/public/friends/*")]
         public void GetFriends()

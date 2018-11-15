@@ -2,7 +2,7 @@
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class LightswitchController : Controller
+    internal sealed class LightswitchController : Controller
     {
         /// <summary>
         /// Checks the status of Fortnite services. In our case, we're always up when the server is. ;)

@@ -2,7 +2,7 @@
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class AffiliateController : Controller
+    internal sealed class AffiliateController : Controller
     {
         [Route("GET", "/affiliate/api/public/affiliates/slug/*")]
         public void CheckIfAffiliateExists()

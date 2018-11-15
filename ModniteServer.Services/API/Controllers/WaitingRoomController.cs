@@ -2,7 +2,7 @@
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class WaitingRoomController : Controller
+    internal sealed class WaitingRoomController : Controller
     {
         /// <summary>
         /// Checks the queue to see if there's room for the client to join.

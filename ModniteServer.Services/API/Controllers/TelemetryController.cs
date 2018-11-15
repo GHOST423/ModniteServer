@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ModniteServer.API.Controllers
 {
-    public sealed class TelemetryController : Controller
+    internal sealed class TelemetryController : Controller
     {
         [Route("POST", "/datarouter/api/v1/public/data")]
         public void ReceiveEvents()
